@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.global-nav {
+    background-color: rgba(0,0,0,0.8);
+    color: #ffffff;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+}
+
+.global-nav__options {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    max-width: 920px;
+}
+
+.global-nav__option {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 20%;
+    display: flex;
+}
+
+.global-nav__link {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    width: 100%;
+    justify-content: center;
+}
+
+.controls {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.global-nav__controls {
+    display: none;
+}
+
+@media (max-width: 720px) {
+    .global-nav {
+        background: black;
+    }
+    .global-nav.expand > .global-nav__options {
+        transform: scaleY(1);
+    }
+    .global-nav.expand .global-nav__option{
+        opacity: 1;
+    }
+    .global-nav__options {
+        position: absolute;
+        top: 48px;
+        left: 0;
+        height: calc(100vh - 48px);
+        background-color: black;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0 2rem;
+        transform: scaleY(0);
+        transform-origin: top center;
+        transition: all 250ms;
+    }
+    .global-nav__option {
+        flex-basis: inherit;
+        flex-grow: 0;
+        flex-shrink: 0;
+        width: 100%;
+        border-bottom: 1px solid grey;
+        opacity: 0;
+        transition: opacity 200ms;
+        transition-delay: 50ms;
+    }
+    .global-nav__option:last-child {
+        border-bottom: none;
+    }
+    .global-nav__link {
+        padding: 10px 0;
+        justify-content: flex-start;
+        font-size: 1.2rem;
+    }
+    .global-nav__controls {
+        display: inherit;
+    }
+}
+

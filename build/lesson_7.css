@@ -1,0 +1,44 @@
+body {
+  background: green; }
+
+.button {
+  width: 100px;
+  height: 80px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+  .button_red {
+    background: red; }
+  .button_blue {
+    background: blue; }
+    .button_blue:hover {
+      background: aqua; }
+
+.link {
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+
+.button {
+  width: 100px;
+  height: 80px; }
+
+.button_red {
+  background: red; }
+
+.button_blue {
+  background: blue; }
+
+.button_blue:hover {
+  background: aqua; }
